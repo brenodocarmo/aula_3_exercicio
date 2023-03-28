@@ -5,9 +5,9 @@ _version_ = 1.0
 """
 
 
-def soma_lista(args):
+def soma_lista(lista_de_elemento):
     acumulador = []
-    for indice in args:
+    for indice in lista_de_elemento:
         if type(indice) == list:
             for valor in indice:
                 acumulador.append(valor)
@@ -16,13 +16,3 @@ def soma_lista(args):
             acumulador.append(indice)
 
     return sum(acumulador)
-
-
-if __name__ == "__main__":
-    elementos = [[2, 5], 1, [1], [1, 1, 1]]
-    """
-    elementos = [[2, 5], 1, [1], [1, 1, 1]]
-    
-    resultado: 12
-    """
-    soma_lista(args=elementos)
